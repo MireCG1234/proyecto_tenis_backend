@@ -31,6 +31,32 @@ const getOneJugador = (jugadorId) => {
   }
 };
 
+const updateOneJugador = (jugadorId, changes) => {
+  try {
+    const id = parseInt(jugadorId, 10);
+    const indexForUpdate = DB.jugadores.findIndex((jugador) => jugador.id === id);
+
+    if (indexForUpdate === -1) {
+      throw {
+        status: 404,
+        message: `No se encontró el jugador con id ${jugadorId}`
+      };
+    }
+
+    const updatedJugador = {
+      ...DB.jugadores[indexForUpdate],
+      ...changes,
+      updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
+    };
+
+    DB.jugadores[indexForUpdate] = updatedJugador;
+    saveToDatabase(DB);
+    return updatedJugador;
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || error };
+  }
+};
+
 
 // --- PARTIDOS ---
 
@@ -75,6 +101,31 @@ const createNewPartido = (partidoToInsert) => {
   }
 };
 
+const updateOnePartido = (partidoId, changes) => {
+  try {
+    const indexForUpdate = DB.partidos.findIndex((partido) => partido.id === partidoId);
+
+    if (indexForUpdate === -1) {
+      throw {
+        status: 404,
+        message: `No se encontró el partido con id ${partidoId}`
+      };
+    }
+
+    const updatedPartido = {
+      ...DB.partidos[indexForUpdate],
+      ...changes,
+      updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
+    };
+
+    DB.partidos[indexForUpdate] = updatedPartido;
+    saveToDatabase(DB);
+    return updatedPartido;
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || error };
+  }
+};
+
 // --- Guardar en base de datos ---
 const saveToDatabase = (DB) => {
   fs.writeFileSync("./src/database/db.json", JSON.stringify(DB, null, 2), {
@@ -85,7 +136,9 @@ const saveToDatabase = (DB) => {
 module.exports = {
   getAllJugadores,
   getOneJugador,
+  updateOneJugador,
   getAllPartidos,
   getOnePartido,
   createNewPartido,
+  updateOnePartido,
 };

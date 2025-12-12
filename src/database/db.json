@@ -2,9 +2,10 @@
   "jugadores": [
     {
       "id": 1,
-      "nombre": "Rafael",
+      "nombre": "Rafa",
       "apellido": "Nadal",
-      "imagen": "https://example.com/images/nadal.jpg"
+      "imagen": "https://example.com/images/nadal_new.jpg",
+      "updatedAt": "12/12/2025, 9:16:54 PM"
     },
     {
       "id": 2,
@@ -86,7 +87,8 @@
         1,
         2
       ],
-      "ganador": 1
+      "ganador": 1,
+      "updatedAt": "12/12/2025, 9:18:25 PM"
     },
     {
       "id": "2b9130d4-47a7-4085-800e-0144f6a46059",

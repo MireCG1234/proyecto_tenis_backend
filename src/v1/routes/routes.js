@@ -8,11 +8,13 @@ const cache = apicache.middleware;
 
 // --- Rutas de jugadores ---
 router.get("/jugadores", tenisController.getAllJugadores);
-router.get("/jugador/:jugadorId", tenisController.getOneJugador);
+router.get("/jugadores/:jugadorId", tenisController.getOneJugador);
+router.patch("/jugadores/:jugadorId", tenisController.updateOneJugador);
 
 // --- Rutas de partidos ---
 router.get("/partidos", tenisController.getAllPartidos);
-router.get("/partido/:partidoId", tenisController.getOnePartido);
-router.post("/partido", tenisController.createNewPartido);
+router.get("/partidos/:partidoId", tenisController.getOnePartido);
+router.post("/partidos", tenisController.createNewPartido);
+router.patch("/partidos/:partidoId", tenisController.updateOnePartido);
 
 module.exports = router;

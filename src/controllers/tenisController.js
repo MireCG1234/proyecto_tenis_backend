@@ -41,6 +41,28 @@ const getOneJugador = (req, res) => {
   }
 };
 
+const updateOneJugador = (req, res) => {
+  const { jugadorId } = req.params;
+  const changes = req.body;
+
+  if (!jugadorId) {
+    return res.status(400).send({
+      status: "FAILED",
+      data: { error: "El parámetro ':jugadorId' no puede estar vacío" }
+    });
+  }
+
+  try {
+    const updatedJugador = tenisService.updateOneJugador(jugadorId, changes);
+    res.send({ status: "OK", data: updatedJugador });
+  } catch (error) {
+    res.status(error?.status || 500).send({
+      status: "FAILED",
+      data: { error: error?.message || "Error interno al actualizar jugador" }
+    });
+  }
+};
+
 // --- PARTIDOS ---
 
 const getAllPartidos = (req, res) => {
@@ -120,14 +142,36 @@ const createNewPartido = (req, res) => {
   }
 };
 
+const updateOnePartido = (req, res) => {
+  const { partidoId } = req.params;
+  const changes = req.body;
 
+  if (!partidoId) {
+    return res.status(400).send({
+      status: "FAILED",
+      data: { error: "El parámetro ':partidoId' no puede estar vacío" }
+    });
+  }
+
+  try {
+    const updatedPartido = tenisService.updateOnePartido(partidoId, changes);
+    res.send({ status: "OK", data: updatedPartido });
+  } catch (error) {
+    res.status(error?.status || 500).send({
+      status: "FAILED",
+      data: { error: error?.message || "Error interno al actualizar partido" }
+    });
+  }
+};
 
 
 
 module.exports = {
       getAllJugadores,
       getOneJugador,
+      updateOneJugador,
       getAllPartidos,
       getOnePartido,
       createNewPartido,
+      updateOnePartido,
 }

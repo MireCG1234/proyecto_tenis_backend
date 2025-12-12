@@ -24,6 +24,14 @@ const getOneJugador = (jugadorId) => {
   }
 };
 
+const updateOneJugador = (jugadorId, changes) => {
+  try {
+    return Tenis.updateOneJugador(jugadorId, changes);
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || "Error interno al actualizar jugador" };
+  }
+};
+
 // --- PARTIDOS ---
 
 const getAllPartidos = () => {
@@ -60,10 +68,20 @@ const createNewPartido = (newPartido) => {
   }
 };
 
+const updateOnePartido = (partidoId, changes) => {
+  try {
+    return Tenis.updateOnePartido(partidoId, changes);
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || "Error interno al actualizar partido" };
+  }
+};
+
 module.exports = {
   getAllJugadores,
   getOneJugador,
+  updateOneJugador,
   getAllPartidos,
   getOnePartido,
   createNewPartido,
+  updateOnePartido,
 };
