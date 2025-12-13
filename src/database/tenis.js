@@ -46,7 +46,6 @@ const updateOneJugador = (jugadorId, changes) => {
     const updatedJugador = {
       ...DB.jugadores[indexForUpdate],
       ...changes,
-      updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
     };
 
     DB.jugadores[indexForUpdate] = updatedJugador;
@@ -115,7 +114,6 @@ const updateOnePartido = (partidoId, changes) => {
     const updatedPartido = {
       ...DB.partidos[indexForUpdate],
       ...changes,
-      updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
     };
 
     DB.partidos[indexForUpdate] = updatedPartido;

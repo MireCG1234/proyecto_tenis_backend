@@ -4,50 +4,49 @@
       "id": 1,
       "nombre": "Rafa",
       "apellido": "Nadal",
-      "imagen": "https://example.com/images/nadal_new.jpg",
-      "updatedAt": "12/12/2025, 9:16:54 PM"
+      "imagen": "nadal.png"
     },
     {
       "id": 2,
       "nombre": "Novak",
       "apellido": "Djokovic",
-      "imagen": "https://example.com/images/djokovic.jpg"
+      "imagen": "novak.png"
     },
     {
       "id": 3,
       "nombre": "Roger",
       "apellido": "Federer",
-      "imagen": "https://example.com/images/federer.jpg"
+      "imagen": "federer.png"
     },
     {
       "id": 4,
       "nombre": "Carlos",
       "apellido": "Alcaraz",
-      "imagen": "https://example.com/images/alcaraz.jpg"
+      "imagen": "alcaraz.png"
     },
     {
       "id": 5,
       "nombre": "Daniil",
       "apellido": "Medvedev",
-      "imagen": "https://example.com/images/medvedev.jpg"
+      "imagen": "daniil.png"
     },
     {
       "id": 6,
       "nombre": "Alexander",
       "apellido": "Zverev",
-      "imagen": "https://example.com/images/zverev.jpg"
+      "imagen": "alexander.png"
     },
     {
       "id": 7,
       "nombre": "Stefanos",
       "apellido": "Tsitsipas",
-      "imagen": "https://example.com/images/tsitsipas.jpg"
+      "imagen": "stefano.png"
     },
     {
       "id": 8,
       "nombre": "Andy",
       "apellido": "Murray",
-      "imagen": "https://example.com/images/murray.jpg"
+      "imagen": "andy.png"
     }
   ],
   "partidos": [
@@ -87,8 +86,7 @@
         1,
         2
       ],
-      "ganador": 1,
-      "updatedAt": "12/12/2025, 9:18:25 PM"
+      "ganador": 1
     },
     {
       "id": "2b9130d4-47a7-4085-800e-0144f6a46059",

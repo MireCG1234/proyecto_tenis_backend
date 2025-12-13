@@ -2,120 +2,263 @@
   "jugadores": [
     {
       "id": 1,
-      "nombre": "Rafael",
+      "nombre": "Rafa",
       "apellido": "Nadal",
-      "imagen": "https://example.com/images/nadal.jpg"
+      "imagen": "nadal.png"
     },
     {
       "id": 2,
       "nombre": "Novak",
       "apellido": "Djokovic",
-      "imagen": "https://example.com/images/djokovic.jpg"
+      "imagen": "novak.png"
     },
     {
       "id": 3,
       "nombre": "Roger",
       "apellido": "Federer",
-      "imagen": "https://example.com/images/federer.jpg"
+      "imagen": "federer.png"
     },
     {
       "id": 4,
       "nombre": "Carlos",
       "apellido": "Alcaraz",
-      "imagen": "https://example.com/images/alcaraz.jpg"
+      "imagen": "alcaraz.png"
     },
     {
       "id": 5,
       "nombre": "Daniil",
       "apellido": "Medvedev",
-      "imagen": "https://example.com/images/medvedev.jpg"
+      "imagen": "daniil.png"
     },
     {
       "id": 6,
       "nombre": "Alexander",
       "apellido": "Zverev",
-      "imagen": "https://example.com/images/zverev.jpg"
+      "imagen": "alexander.png"
     },
     {
       "id": 7,
       "nombre": "Stefanos",
       "apellido": "Tsitsipas",
-      "imagen": "https://example.com/images/tsitsipas.jpg"
+      "imagen": "stefano.png"
     },
     {
       "id": 8,
       "nombre": "Andy",
       "apellido": "Murray",
-      "imagen": "https://example.com/images/murray.jpg"
+      "imagen": "andy.png"
     }
   ],
   "partidos": [
+    {
+      "id": "12a410bc-849f-4e7e-bfc8-4ef283ee4b19",
+      "torneo": "Roland Garros",
+      "ronda": "Final",
+      "puntajes": {
+        "sets": [
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 3
+            }
+          },
+          {
+            "juegos": {
+              "j1": 4,
+              "j2": 6
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 4
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 2
+            }
+          }
+        ]
+      },
+      "jugadores": [
+        1,
+        2
+      ],
+      "ganador": 1
+    },
+    {
+      "id": "2b9130d4-47a7-4085-800e-0144f6a46059",
+      "torneo": "Wimbledon",
+      "ronda": "Semifinal",
+      "puntajes": {
+        "sets": [
+          {
+            "juegos": {
+              "j1": 7,
+              "j2": 6
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 7
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 3
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 4
+            }
+          }
+        ]
+      },
+      "jugadores": [
+        3,
+        2
+      ],
+      "ganador": 3
+    },
+    {
+      "id": "11817fb1-03a1-4b4a-8d27-854ac893cf41",
+      "torneo": "US Open",
+      "ronda": "Cuartos de final",
+      "puntajes": {
+        "sets": [
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 2
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 4
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 3
+            }
+          }
+        ]
+      },
+      "jugadores": [
+        4,
+        5
+      ],
+      "ganador": 4
+    },
+    {
+      "id": "6a89217b-7c28-4219-bd7f-af119c314159",
+      "torneo": "Australian Open",
+      "ronda": "Final",
+      "puntajes": {
+        "sets": [
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 4
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 7
+            }
+          },
+          {
+            "juegos": {
+              "j1": 7,
+              "j2": 6
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 3
+            }
+          }
+        ]
+      },
+      "jugadores": [
+        2,
+        5
+      ],
+      "ganador": 2
+    },
+    {
+      "id": "08995831-89e6-4f2d-93e3-438867e9d739",
+      "torneo": "Masters de Madrid",
+      "ronda": "Octavos de final",
+      "puntajes": {
+        "sets": [
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 1
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 2
+            }
+          }
+        ]
+      },
+      "jugadores": [
+        1,
+        4
+      ],
+      "ganador": 1
+    },
     {
       "torneo": "Roland Garros",
       "ronda": "Final",
       "puntajes": {
         "sets": [
-          { "juegos": { "j1": 6, "j2": 3 } },
-          { "juegos": { "j1": 4, "j2": 6 } },
-          { "juegos": { "j1": 6, "j2": 4 } },
-          { "juegos": { "j1": 6, "j2": 2 } }
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 3
+            }
+          },
+          {
+            "juegos": {
+              "j1": 4,
+              "j2": 6
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 4
+            }
+          },
+          {
+            "juegos": {
+              "j1": 6,
+              "j2": 2
+            }
+          }
         ]
       },
-      "jugadores": [1, 2],
-      "ganador": 1
-    },
-    {
-      "torneo": "Wimbledon",
-      "ronda": "Semifinal",
-      "puntajes": {
-        "sets": [
-          { "juegos": { "j1": 7, "j2": 6 } },
-          { "juegos": { "j1": 6, "j2": 7 } },
-          { "juegos": { "j1": 6, "j2": 3 } },
-          { "juegos": { "j1": 6, "j2": 4 } }
-        ]
-      },
-      "jugadores": [3, 2],
-      "ganador": 3
-    },
-    {
-      "torneo": "US Open",
-      "ronda": "Cuartos de final",
-      "puntajes": {
-        "sets": [
-          { "juegos": { "j1": 6, "j2": 2 } },
-          { "juegos": { "j1": 6, "j2": 4 } },
-          { "juegos": { "j1": 6, "j2": 3 } }
-        ]
-      },
-      "jugadores": [4, 5],
-      "ganador": 4
-    },
-    {
-      "torneo": "Australian Open",
-      "ronda": "Final",
-      "puntajes": {
-        "sets": [
-          { "juegos": { "j1": 6, "j2": 4 } },
-          { "juegos": { "j1": 6, "j2": 7 } },
-          { "juegos": { "j1": 7, "j2": 6 } },
-          { "juegos": { "j1": 6, "j2": 3 } }
-        ]
-      },
-      "jugadores": [2, 5],
-      "ganador": 2
-    },
-    {
-      "torneo": "Masters de Madrid",
-      "ronda": "Octavos de final",
-      "puntajes": {
-        "sets": [
-          { "juegos": { "j1": 6, "j2": 1 } },
-          { "juegos": { "j1": 6, "j2": 2 } }
-        ]
-      },
-      "jugadores": [1, 4],
-      "ganador": 1
+      "jugadores": [
+        1,
+        2
+      ],
+      "ganador": 1,
+      "id": "458457e7-5632-497d-a062-270005e45eff"
     }
   ]
 }
